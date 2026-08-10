@@ -1,0 +1,6 @@
+[Unit]
+Description='Log hostname changes'
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/hostname-change
