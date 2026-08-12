@@ -1,6 +1,6 @@
 [Unit]
-Description='Log hostname changes'
+Description=hostname-watch-service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/hostname-change
+ExecStart=/usr/local/bin/hostname-change.sh
