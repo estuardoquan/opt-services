@@ -5,9 +5,10 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=sh -c "/usr/local/bin/vlan.sh -i 10 -i 20 -i 31 ens3"
-ExecStop=sh -c "/usr/local/bin/vlan.sh -d -i 10 -i 20 -i 31 ens3"
+ExecStart=/usr/local/bin/vlan.sh -i "10 20" ens18
+ExecStop=/usr/local/bin/vlan.sh -d -i "10 20" ens18
 RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
+
